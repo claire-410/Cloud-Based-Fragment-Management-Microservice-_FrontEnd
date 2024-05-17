@@ -1,5 +1,5 @@
 // src/app.js
-
+import { getUserFragments } from './api';
 import { Auth, getUser } from './auth';
 
 async function init() {
@@ -30,6 +30,13 @@ async function init() {
 
   // Log the user info for debugging purposes
   console.log({ user });
+
+  // Do an authenticated request to the fragments API server and log the result
+  const userFragments = await getUserFragments(user);
+
+  // TODO: later in the course, we will show all the user's fragments in the HTML...
+  // ...
+
 
   // Update the UI to welcome the user
   userSection.hidden = false;
