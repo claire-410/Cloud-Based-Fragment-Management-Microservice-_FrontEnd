@@ -11,6 +11,8 @@ const apiUrl = process.env.API_URL || 'http://localhost:8080';
 export async function getUserFragments(user) {
   console.log('Requesting user fragments data...');
   console.log('user.authorizationHeaders()', user.authorizationHeaders());
+  
+
   try {
     const res = await fetch(`${apiUrl}/v1/fragments`, {
       // Generate headers with the proper Authorization bearer token to pass.
@@ -23,6 +25,7 @@ export async function getUserFragments(user) {
     }
     const data = await res.json();
     console.log('Successfully got user fragments data', { data });
+    
     return data;
   } catch (err) {
     console.error('Unable to call GET /v1/fragment', { err });
