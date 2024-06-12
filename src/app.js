@@ -38,6 +38,7 @@ async function init() {
 
   // Do an authenticated request to the fragments API server and log the result
   const userFragments = await getUserFragments(user);
+  console.log(userFragments); 
   
   // TODO: later in the course, we will show all the user's fragments in the HTML...
   // ...
@@ -60,6 +61,7 @@ async function init() {
     console.log('POSTing: ' + document.querySelector('#textfield').value);
     try {
       const res = await fetch(`${apiUrl}/v1/fragments`, {
+        
         method: "POST",
         body: document.querySelector('#textfield').value,
         // Generate headers with the proper Authorization bearer token to pass
@@ -73,6 +75,7 @@ async function init() {
       }
       const data = await res.json();
       console.log('Posted user fragments data', { data });
+      
     } catch (err) {
       console.error('Unable to POST to /v1/fragment', { err });
     }
