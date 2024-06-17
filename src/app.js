@@ -58,7 +58,7 @@ async function init() {
   // Post button
   postTpBtn.onclick = async() => {
     console.log('POST fragments data...');
-    console.log('POSTing: ' + document.querySelector('#textfield').value);
+    console.log('Posting: ' + document.querySelector('#textfield').value);
     try {
       const res = await fetch(`${apiUrl}/v1/fragments`, {
         
