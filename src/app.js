@@ -1,7 +1,3 @@
-console.log('Hello world!');
-
-// console.log(process.env);
-
 // src/app.js
 
 import { Auth, getUser } from './auth';
