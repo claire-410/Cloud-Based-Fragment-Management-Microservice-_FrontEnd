@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bamboo.css" />
     <script type="module" src="app.js"></script>
   </head>
+
   <body>
     <h1>Fragments UI</h1>
     <section hidden id="user">
@@ -15,6 +16,7 @@
       <nav><button id="login">Login</button> <button id="logout">Logout</button></nav>
       <br>
       <nav>
+
         <form>
           <label for="textfield">Please enter the fragment text here:</label>
           <input id="textfield" type="text"/>
@@ -27,6 +29,45 @@
       </nav>
       <nav>
         <br>
+
+        <form>
+          <label for="fragId">Please enter the fragment id to update or delete the fragment:</label>
+          <input id="fragId" type="text"/>
+        </form>
+        <form>
+          <label for="textfield2">Please enter fragment text here to update:</label>
+          <input id="textfield2" type="text"/>
+        </form>
+        
+        <label for="contentType">Content Type:</label>
+        <select id="contentType">
+          <option value="text/plain">text/plain</option>
+          <option value="text/html">text/html</option>
+          <option value="text/markdown">text/markdown</option>
+          <option value="application/json">application/json</option>
+        </select>
+
+
+
+
+
+
+
+
+
+        <br>
+        <button id="putBtn">Update fragment</button>
+        <button id="delBtn">Delete fragment</button>
+      </nav>
+      <nav>
+        <br>
+        <label for="imageFile">Please click here to select Image File for posting</label>
+        <input id="imageFile" type="file" accept="image/*">
+    </br>
+      </nav>
+      <nav>
+        <br>
+
         <button id="expand">Click to view existing fragments data</button>
         
         <button id="expand2">Click to view existing fragments metadata</button>
