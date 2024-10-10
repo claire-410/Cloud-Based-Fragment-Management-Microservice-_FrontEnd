@@ -1,3 +1,4 @@
+
 // src/app.js
 
 import { Auth, getUser } from './auth';
